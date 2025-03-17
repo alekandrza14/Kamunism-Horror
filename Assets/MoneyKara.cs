@@ -26,13 +26,21 @@ public class MoneyKara : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > 8) if (fristPersonControler.money > 300)
+        if (timer > 8) if (fristPersonControler.money > 300 && fristPersonControler.money < 500)
             {
                 PlaySkrimer();
+            }
+        if (timer > 8) if (fristPersonControler.money > 500)
+            {
+                GameVin();
             }
     }
     public void newGame()
     {
         SceneManager.LoadScene(0);
+    }
+    public void GameVin()
+    {
+        SceneManager.LoadScene(8);
     }
 }
